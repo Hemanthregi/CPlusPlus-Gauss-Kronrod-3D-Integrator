@@ -40,5 +40,28 @@ Done calculating f(x)
 Process returned 0 (0x0)   execution time : 0.149 s
 Press any key to continue.
 ```
+## Performance Characteristics
+
+- Deterministic quadrature refinement from 15 to 1023 Kronrod nodes.
+- Runtime scales predictably with quadrature order and dimensional nesting.
+- Pre-allocated arrays minimize dynamic memory overhead.
+- Compiled with -O2 optimization for performance benchmarking.
+- Execution time printed for each run for direct performance evaluation.
+## Numerical Stability & Error Control
+
+- Automatic order escalation until user-defined tolerance is satisfied.
+- Explicit error threshold parameter enables precision-speed tradeoff.
+- High-order Kronrod grids ensure stable integration of stiff functions.
+- Deterministic convergence behavior compared to Monte Carlo variance.
+## Quantitative Modeling Relevance
+
+High-precision multidimensional integration is fundamental in:
+
+- Expectation estimation in stochastic systems
+- Risk metric evaluation
+- Probabilistic model calibration
+- Deterministic alternatives to Monte Carlo sampling
+
+This project demonstrates structured error control, adaptive precision refinement, and performance-aware numerical implementation in C++. 
 ## License
 This project is released under the MIT License. See the LICENSE file for details.
